@@ -4,9 +4,9 @@ import clsx from "clsx";
 import NodeWrapper from "./components/NodeWrapper";
 import HandleComponent from "./components/HandleComponent";
 const DefaultNode = (props) => {
-    const { nodeProps: { data, selected }, height, width, isRunning = false, nodeError = null, children, } = props;
+    const { nodeProps: { data }, height, width, isRunning = false, nodeError = null, children, } = props;
     return (_jsx(NodeWrapper, { wrapperProps: props, children: _jsxs("div", { className: clsx("flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-accent1 bg-accent1/5", {
-                "shadow-around shadow-accent1": isRunning || selected,
+                "shadow-around shadow-accent1": isRunning !== null && isRunning !== void 0 ? isRunning : data.selected,
             }, { "shadow-around shadow-red-700": nodeError }), style: {
                 width,
                 height,

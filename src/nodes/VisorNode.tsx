@@ -41,7 +41,7 @@ const chartElemMap: { [func: string]: React.JSX.Element } = {
 
 const VisorNode = (props: CustomNodeProps) => {
   const {
-    nodeProps: { data, selected },
+    nodeProps: { data },
     nodeError,
     isRunning,
     plotlyFig,
@@ -59,7 +59,7 @@ const VisorNode = (props: CustomNodeProps) => {
         className={clsx(
           "bg-transparent rounded-2xl",
           {
-            "shadow-around shadow-accent1": isRunning || selected,
+            "shadow-around shadow-accent1": isRunning ?? data.selected,
           },
           { "shadow-around shadow-red-700": nodeError }
         )}

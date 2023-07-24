@@ -2,8 +2,8 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import NodeButtons from "./NodeButtons";
 import clsx from "clsx";
 const NodeWrapper = ({ wrapperProps: { nodeProps, wrapperOnClick, handleRemove, handleClickExpand, nodeError, }, children, }) => {
-    const { data, selected } = nodeProps;
-    return (_jsxs("div", { className: "relative", "data-testid": "node-wrapper", onClick: wrapperOnClick, children: [selected && handleRemove && (_jsx(NodeButtons, { data: data, handleRemove: handleRemove, handleClickExpand: handleClickExpand })), nodeError && _jsx(ErrorPopup, { message: nodeError }), children] }));
+    const { data } = nodeProps;
+    return (_jsxs("div", { className: "relative", "data-testid": "node-wrapper", onClick: wrapperOnClick, children: [data.selected && handleRemove && (_jsx(NodeButtons, { data: data, handleRemove: handleRemove, handleClickExpand: handleClickExpand })), nodeError && _jsx(ErrorPopup, { message: nodeError }), children] }));
 };
 export default NodeWrapper;
 const ErrorPopup = ({ message }) => {

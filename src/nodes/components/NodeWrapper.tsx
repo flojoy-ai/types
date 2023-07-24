@@ -16,7 +16,7 @@ const NodeWrapper = ({
   wrapperProps: CustomNodeProps;
   children: React.ReactNode;
 }) => {
-  const { data, selected } = nodeProps;
+  const { data } = nodeProps;
 
   return (
     <div
@@ -24,7 +24,7 @@ const NodeWrapper = ({
       data-testid="node-wrapper"
       onClick={wrapperOnClick}
     >
-      {selected && handleRemove && (
+      {data.selected && handleRemove && (
         <NodeButtons
           data={data}
           handleRemove={handleRemove}

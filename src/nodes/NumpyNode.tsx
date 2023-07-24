@@ -15,7 +15,7 @@ const NumpyNode = (props: CustomNodeProps) => {
           "flex h-40 w-60 items-center justify-center rounded-2xl border-2 border-blue-500 bg-accent1/5",
          
          { "shadow-around shadow-blue-500"
-            : isRunning ?? selected },
+            : isRunning ?? data.selected },
           {"shadow-around shadow-red-700" : nodeError }
         )}
       >

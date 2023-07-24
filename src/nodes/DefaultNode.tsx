@@ -6,7 +6,7 @@ import HandleComponent from "./components/HandleComponent";
 
 const DefaultNode = (props: CustomNodeProps) => {
   const {
-    nodeProps: { data, selected },
+    nodeProps: { data },
     height,
     width,
     isRunning = false,
@@ -20,7 +20,7 @@ const DefaultNode = (props: CustomNodeProps) => {
         className={clsx(
           "flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-accent1 bg-accent1/5",
           {
-            "shadow-around shadow-accent1": isRunning || selected,
+            "shadow-around shadow-accent1": isRunning ?? data.selected,
           },
           { "shadow-around shadow-red-700": nodeError }
         )}
