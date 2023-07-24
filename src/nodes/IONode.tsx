@@ -17,7 +17,7 @@ const IONode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-48 w-48 flex-col items-center",
-          { "shadow-around shadow-accent4": isRunning ?? data.selected },
+          { "shadow-around shadow-accent4": isRunning || data.selected },
           { "shadow-around shadow-red-700": nodeError }
         )}
       >

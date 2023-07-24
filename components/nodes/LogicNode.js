@@ -11,6 +11,6 @@ const LogicNode = (props) => {
     if (!input) {
         throw new Error("Logic node must have an input");
     }
-    return (_jsx(NodeWrapper, { wrapperProps: props, children: _jsx("div", { className: clsx("flex h-24 w-24 rotate-45 items-center justify-center rounded-xl border-2 border-accent3 bg-accent3/5", { "shadow-around shadow-accent3": isRunning !== null && isRunning !== void 0 ? isRunning : data.selected }, { "shadow-around shadow-red-700": nodeError }), children: children !== null && children !== void 0 ? children : (_jsxs(_Fragment, { children: [_jsx("h2", { className: "-rotate-45 font-sans text-2xl font-extrabold tracking-wider text-accent3", children: data.label }), _jsx(CustomHandle, { position: Position.Bottom, type: "target", param: input, colorClass: "!border-accent3", style: { left: 3, bottom: -3 } })] })) }) }));
+    return (_jsx(NodeWrapper, { wrapperProps: props, children: _jsx("div", { className: clsx("flex h-24 w-24 rotate-45 items-center justify-center rounded-xl border-2 border-accent3 bg-accent3/5", { "shadow-around shadow-accent3": isRunning || data.selected }, { "shadow-around shadow-red-700": nodeError }), children: children !== null && children !== void 0 ? children : (_jsxs(_Fragment, { children: [_jsx("h2", { className: "-rotate-45 font-sans text-2xl font-extrabold tracking-wider text-accent3", children: data.label }), _jsx(CustomHandle, { position: Position.Bottom, type: "target", param: input, colorClass: "!border-accent3", style: { left: 3, bottom: -3 } })] })) }) }));
 };
 export default memo(LogicNode);
