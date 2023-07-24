@@ -8,9 +8,17 @@ export { default as LoopNode } from "./nodes/LoopNode";
 export { default as NumpyNode } from "./nodes/NumpyNode";
 export { default as ScipyNode } from "./nodes/ScipyNode";
 export { default as VisorNode } from "./nodes/VisorNode";
-export {default as PlotlyComponent} from "./plotly/PlotlyComponent"
-export {dataContainer2Plotly, makePlotlyData } from "./plotly/formatPlotlyData"
-export { nodeTypesMap } from "@src/nodes/nodeTypesMap"; 
-export type {DataContainer} from "@src/types/dataContainer"
-export type {OverridePlotData, DataContainer2PlotlyProps, PlotProps} from "@src/types/plotly"
-export type { CustomNodeProps, ElementsData } from "@src/types/node"
+export { default as PlotlyComponent } from "./plotly/PlotlyComponent";
+export { ParamTooltip } from "./nodes/components/ParamTooltip";
+export {
+  dataContainer2Plotly,
+  makePlotlyData,
+} from "./plotly/formatPlotlyData";
+export { nodeTypesMap } from "@src/nodes/nodeTypesMap";
+export type { DataContainer } from "@src/types/dataContainer";
+export type {
+  OverridePlotData,
+  DataContainer2PlotlyProps,
+  PlotProps,
+} from "@src/types/plotly";
+export type { CustomNodeProps, ElementsData } from "@src/types/node";
