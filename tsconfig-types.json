@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "declaration": true,
+    "baseUrl": "src",
+    "paths": {
+      "@src/*": ["./*"]
+    },
+    "rootDir": "src/types",
+    "outDir": "types"
+  },
+  "include": ["src/types"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules", "dist", "build", "src/data", "src/nodes", "src/plotly" ]
+}

@@ -1,0 +1,440 @@
+{
+    "rfInstance": {
+        "nodes": [
+            {
+                "id": "SINE-6870f4e7-8b6a-4f7a-9bbb-9cd5c8e21d6b",
+                "type": "SIMULATIONS",
+                "data": {
+                    "id": "SINE-6870f4e7-8b6a-4f7a-9bbb-9cd5c8e21d6b",
+                    "label": "SINE",
+                    "func": "SINE",
+                    "type": "SIMULATIONS",
+                    "ctrls": {
+                        "amplitude": {
+                            "type": "float",
+                            "default": 1,
+                            "desc": null,
+                            "functionName": "SINE",
+                            "param": "amplitude",
+                            "value": 1
+                        },
+                        "frequency": {
+                            "type": "float",
+                            "default": 1,
+                            "desc": null,
+                            "functionName": "SINE",
+                            "param": "frequency",
+                            "value": 1
+                        },
+                        "offset": {
+                            "type": "float",
+                            "default": 0,
+                            "desc": null,
+                            "functionName": "SINE",
+                            "param": "offset",
+                            "value": 0
+                        },
+                        "phase": {
+                            "type": "float",
+                            "default": 0,
+                            "desc": null,
+                            "functionName": "SINE",
+                            "param": "phase",
+                            "value": 0
+                        },
+                        "waveform": {
+                            "type": "select",
+                            "default": "sine",
+                            "options": [
+                                "sine",
+                                "square",
+                                "triangle",
+                                "sawtooth"
+                            ],
+                            "desc": null,
+                            "functionName": "SINE",
+                            "param": "waveform",
+                            "value": "sine"
+                        }
+                    },
+                    "inputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "OrderedPair|Vector",
+                            "multiple": false,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "OrderedPair",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\GENERATORS\\SIMULATIONS\\SINE\\SINE.py"
+                },
+                "position": {
+                    "x": -45.8973481672098,
+                    "y": 70.87266526598597
+                },
+                "width": 208,
+                "height": 96
+            },
+            {
+                "width": 150,
+                "height": 180,
+                "id": "READ_CSV-d32feac2-1c89-4cfe-84e3-5c1ec3a83733",
+                "type": "STATS",
+                "data": {
+                    "id": "READ_CSV-d32feac2-1c89-4cfe-84e3-5c1ec3a83733",
+                    "label": "READ CSV",
+                    "func": "READ_CSV",
+                    "type": "FILE",
+                    "ctrls": {
+                        "file_path": {
+                            "type": "str",
+                            "default": "https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv",
+                            "desc": "File path to the CSV file or an URL of CSV file",
+                            "functionName": "READ_CSV",
+                            "param": "file_path",
+                            "value": "https://raw.githubusercontent.com/cs109/2014_data/master/countries.csv"
+                        }
+                    },
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "DataFrame",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\EXTRACTORS\\FILE\\READ_CSV\\READ_CSV.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": -235.507238456462,
+                    "y": 127.9996925946628
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -235.507238456462,
+                    "y": 127.9996925946628
+                },
+                "dragging": true
+            },
+            {
+                "width": 72,
+                "height": 72,
+                "id": "MULTIPLY-b218716d-d0f3-4a0b-8d93-fd106c3c57a1",
+                "type": "ARITHMETIC",
+                "data": {
+                    "id": "MULTIPLY-b218716d-d0f3-4a0b-8d93-fd106c3c57a1",
+                    "label": "MULTIPLY",
+                    "func": "MULTIPLY",
+                    "type": "ARITHMETIC",
+                    "ctrls": {},
+                    "inputs": [
+                        {
+                            "name": "a",
+                            "id": "a",
+                            "type": "OrderedPair|Scalar|Vector",
+                            "multiple": false,
+                            "desc": null
+                        },
+                        {
+                            "name": "b",
+                            "id": "b",
+                            "type": "OrderedPair|Scalar|Vector",
+                            "multiple": true,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "OrderedPair|Scalar|Vector",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\TRANSFORMERS\\ARITHMETIC\\MULTIPLY\\MULTIPLY.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": -224.17110238904257,
+                    "y": 1.0842200463230256
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -224.17110238904257,
+                    "y": 1.0842200463230256
+                },
+                "dragging": true
+            },
+            {
+                "width": 192,
+                "height": 192,
+                "id": "KEITHLEY2400-3e2ed346-2b5b-4447-b0a4-1a9577ea593a",
+                "type": "KEITHLEY",
+                "data": {
+                    "id": "KEITHLEY2400-3e2ed346-2b5b-4447-b0a4-1a9577ea593a",
+                    "label": "KEITHLEY2400",
+                    "func": "KEITHLEY2400",
+                    "type": "KEITHLEY",
+                    "ctrls": {
+                        "comport": {
+                            "type": "str",
+                            "default": "/dev/ttyUSB0",
+                            "desc": null,
+                            "functionName": "KEITHLEY2400",
+                            "param": "comport",
+                            "value": "/dev/ttyUSB0"
+                        },
+                        "baudrate": {
+                            "type": "float",
+                            "default": 9600,
+                            "desc": null,
+                            "functionName": "KEITHLEY2400",
+                            "param": "baudrate",
+                            "value": 9600
+                        }
+                    },
+                    "inputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "OrderedPair",
+                            "multiple": false,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "OrderedPair",
+                            "desc": null
+                        }
+                    ],
+                    "pip_dependencies": [
+                        {
+                            "name": "pyserial",
+                            "v": "3.5"
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\INSTRUMENTS\\KEITHLEY\\KEITHLEY2400\\KEITHLEY2400.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": -108.13472987408518,
+                    "y": -150.48689112923196
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -108.13472987408518,
+                    "y": -150.48689112923196
+                },
+                "dragging": true
+            },
+            {
+                "width": 150,
+                "height": 180,
+                "id": "CHOLESKY-808b3caf-81f0-4f0f-99b1-bff2846b8859",
+                "type": "LINALG",
+                "data": {
+                    "id": "CHOLESKY-808b3caf-81f0-4f0f-99b1-bff2846b8859",
+                    "label": "CHOLESKY",
+                    "func": "CHOLESKY",
+                    "type": "default",
+                    "ctrls": {},
+                    "inputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "Matrix",
+                            "multiple": false,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "Matrix|Scalar",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\NUMPY\\LINALG\\CHOLESKY\\CHOLESKY.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": 133.02794039670462,
+                    "y": -112.3349957544088
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": 133.02794039670462,
+                    "y": -112.3349957544088
+                },
+                "dragging": true
+            },
+            {
+                "width": 96,
+                "height": 96,
+                "id": "CONDITIONAL-5f98492f-afdf-4fbd-a8df-962110216a7f",
+                "type": "CONDITIONALS",
+                "data": {
+                    "id": "CONDITIONAL-5f98492f-afdf-4fbd-a8df-962110216a7f",
+                    "label": "CONDITIONAL",
+                    "func": "CONDITIONAL",
+                    "type": "CONDITIONALS",
+                    "ctrls": {
+                        "operator_type": {
+                            "type": "select",
+                            "default": ">=",
+                            "options": [
+                                "<=",
+                                ">",
+                                "<",
+                                ">=",
+                                "!=",
+                                "=="
+                            ],
+                            "desc": null,
+                            "functionName": "CONDITIONAL",
+                            "param": "operator_type",
+                            "value": ">="
+                        }
+                    },
+                    "inputs": [
+                        {
+                            "name": "x",
+                            "id": "x",
+                            "type": "OrderedPair",
+                            "multiple": false,
+                            "desc": null
+                        },
+                        {
+                            "name": "y",
+                            "id": "y",
+                            "type": "OrderedPair",
+                            "multiple": false,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "true",
+                            "id": "true",
+                            "type": "Any",
+                            "desc": null
+                        },
+                        {
+                            "name": "false",
+                            "id": "false",
+                            "type": "Any",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\LOGIC_GATES\\CONDITIONALS\\CONDITIONAL\\CONDITIONAL.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": 9.59027936106827,
+                    "y": 205.3478347988692
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": 9.59027936106827,
+                    "y": 205.3478347988692
+                },
+                "dragging": true
+            },
+            {
+                "width": 96,
+                "height": 96,
+                "id": "LOOP-f5da2241-3c61-404e-b60f-f607d93f3fdf",
+                "type": "LOOPS",
+                "data": {
+                    "id": "LOOP-f5da2241-3c61-404e-b60f-f607d93f3fdf",
+                    "label": "LOOP",
+                    "func": "LOOP",
+                    "type": "LOOPS",
+                    "ctrls": {
+                        "num_loops": {
+                            "type": "int",
+                            "default": -1,
+                            "desc": "number of times to iterate through body nodes default is `-1` meaning infinity.",
+                            "functionName": "LOOP",
+                            "param": "num_loops",
+                            "value": -1
+                        }
+                    },
+                    "inputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "Any",
+                            "multiple": false,
+                            "desc": null
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "body",
+                            "id": "body",
+                            "type": "Any",
+                            "desc": null
+                        },
+                        {
+                            "name": "end",
+                            "id": "end",
+                            "type": "Any",
+                            "desc": null
+                        }
+                    ],
+                    "path": "PYTHON/nodes\\LOGIC_GATES\\LOOPS\\LOOP\\LOOP.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": -435.5040880085751,
+                    "y": 34.91171456076694
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -435.5040880085751,
+                    "y": 34.91171456076694
+                },
+                "dragging": true
+            }
+        ],
+        "edges": [],
+        "viewport": {
+            "x": 717.7208746158861,
+            "y": 218.86563961393284,
+            "zoom": 0.9294422781101465
+        }
+    },
+    "ctrlsManifest": [
+        {
+            "type": "input",
+            "name": "Slider",
+            "id": "INPUT_PLACEHOLDER",
+            "hidden": false,
+            "minHeight": 1,
+            "minWidth": 2,
+            "layout": {
+                "x": 0,
+                "y": 0,
+                "h": 2,
+                "w": 2,
+                "minH": 1,
+                "minW": 2,
+                "i": "INPUT_PLACEHOLDER"
+            }
+        }
+    ]
+}

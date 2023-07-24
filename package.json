@@ -1,0 +1,43 @@
+{
+  "name": "flojoy",
+  "version": "0.1.0",
+  "main": "components/index.js",
+  "types": "components/index.d.ts",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc --project tsconfig.json && npm run build:types && npm run tsc-path:com && npm run tsc-path:types && npm run build:css",
+    "build:types": "tsc --project tsconfig-types.json",
+    "build:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css",
+    "tsc-path:com": "tscpaths -p tsconfig.json -s ./src -o ./components",
+    "tsc-path:types": "tscpaths -p tsconfig.json -s ./src -o ./types",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "cleanup": "rmdir /s /q dist build components types styles"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^2.17.0",
+    "clsx": "^2.0.0",
+    "plotly.js": "2.23.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.6.0",
+    "reactflow": "^11.7.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.26",
+    "autoprefixer": "^10.4.14",
+    "tailwindcss": "^3.3.3",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react": "^4.0.1",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "tsc-alias": "^1.8.7",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
+  }
+}

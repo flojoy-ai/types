@@ -1,0 +1,10 @@
+src
+node_modules
+public
+*.config.js
+*.html
+tailwind.*
+tsconfig.json
+tsconfig.node.json
+*.config.ts
+*.config.js
