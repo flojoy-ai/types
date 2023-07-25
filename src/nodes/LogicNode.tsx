@@ -17,8 +17,8 @@ const LogicNode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-24 w-24 rotate-45 items-center justify-center rounded-xl border-2 border-accent3 bg-accent3/5",
-          isRunning || data.selected ? "shadow-around shadow-accent3" : "",
-          nodeError ? "shadow-around shadow-red-700" : ""
+          { "shadow-around shadow-accent3": isRunning || data.selected },
+          { "shadow-around shadow-red-700": nodeError }
         )}
       >
         {children ?? (

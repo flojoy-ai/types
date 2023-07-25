@@ -17,8 +17,8 @@ const IONode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-48 w-48 flex-col items-center",
-          isRunning || data.selected ? "shadow-around shadow-accent4" : "",
-          nodeError ? "shadow-around shadow-red-700" : ""
+          { "shadow-around shadow-accent4": isRunning || data.selected },
+          { "shadow-around shadow-red-700": nodeError }
         )}
       >
         <DodecahedronSVG />

@@ -17,8 +17,8 @@ const NumpyNode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-40 w-60 items-center justify-center rounded-2xl border-2 border-blue-500 bg-accent1/5",
-          isRunning || data.selected ? "shadow-around shadow-blue-500" : "",
-          nodeError ? "shadow-around shadow-red-700" : ""
+          { "shadow-around shadow-blue-500": isRunning || data.selected },
+          { "shadow-around shadow-red-700": nodeError }
         )}
       >
         <div className="flex flex-col items-center">
