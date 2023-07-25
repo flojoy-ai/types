@@ -1,6 +1,5 @@
 import { SVGProps } from "react";
 
-// fill is a tailwind class
 export const DodecahedronSVG = ({ ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg

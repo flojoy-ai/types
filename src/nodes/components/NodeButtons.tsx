@@ -23,7 +23,7 @@ const NodeButtons = ({
   };
 
   return (
-    <div className={"absolute p-2 w-full z-[150] flex text-accent1"}>
+    <div className={"absolute p-2 w-full z-50 flex text-accent1"}>
       <div className="cursor-pointer">
         <IconArrowsMaximize
           data-testid="expand-button"
