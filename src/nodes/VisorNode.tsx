@@ -58,10 +58,8 @@ const VisorNode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "bg-transparent rounded-2xl",
-          {
-            "shadow-around shadow-accent1": isRunning || data.selected,
-          },
-          { "shadow-around shadow-red-700": nodeError }
+          isRunning || data.selected ? "shadow-around shadow-accent1" : "",
+          nodeError ? "shadow-around shadow-red-700" : ""
         )}
       >
         {plotlyData ? (

@@ -15,8 +15,8 @@ const DataNode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-24 w-52 items-center justify-center rounded-full border-2 border-accent2",
-          { "shadow-around shadow-accent2": isRunning || data.selected },
-          { "shadow-around shadow-red-700": nodeError }
+          isRunning || data.selected ? "shadow-around shadow-accent2" : "",
+          nodeError ? "shadow-around shadow-red-700" : ""
         )}
       >
         <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent2">
