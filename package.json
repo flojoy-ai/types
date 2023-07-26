@@ -5,6 +5,7 @@
   "types": "components/index.d.ts",
   "scripts": {
     "start": "vite",
+    "install": "npm run build",
     "build": "tsc --project tsconfig.json && npm run build:types && npm run tsc-path:com && npm run tsc-path:types && npm run build:css",
     "build:types": "tsc --project tsconfig-types.json",
     "build:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css",
