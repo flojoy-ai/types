@@ -41,9 +41,7 @@ const VisorNode = (props) => {
     var _a;
     const { nodeProps: { data }, nodeError, isRunning, plotlyFig, theme = "light", } = props;
     const plotlyData = useMemo(() => (plotlyFig ? makePlotlyData(plotlyFig.data, theme, true) : null), [plotlyFig, theme]);
-    return (_jsx(NodeWrapper, { wrapperProps: props, children: _jsx("div", { className: clsx("bg-transparent rounded-2xl", {
-                "shadow-around shadow-accent1": isRunning || data.selected,
-            }, { "shadow-around shadow-red-700": nodeError }), children: plotlyData ? (_jsxs("div", { className: "relative flex items-center text-[17px] m-h-[130px] h-[fit-content]", children: [_jsx(PlotlyComponent, { data: plotlyData, id: data.id, layout: (_a = plotlyFig === null || plotlyFig === void 0 ? void 0 : plotlyFig.layout) !== null && _a !== void 0 ? _a : {}, useResizeHandler: true, style: {
+    return (_jsx(NodeWrapper, { wrapperProps: props, children: _jsx("div", { className: clsx("bg-transparent rounded-2xl", { "shadow-around shadow-accent1": isRunning || data.selected }, { "shadow-around shadow-red-700": nodeError }), children: plotlyData ? (_jsxs("div", { className: "relative flex items-center text-[17px] m-h-[130px] h-[fit-content]", children: [_jsx(PlotlyComponent, { data: plotlyData, id: data.id, layout: (_a = plotlyFig === null || plotlyFig === void 0 ? void 0 : plotlyFig.layout) !== null && _a !== void 0 ? _a : {}, useResizeHandler: true, style: {
                             height: 293,
                             width: 380,
                         }, theme: theme, isThumbnail: true }), _jsx(HandleComponent, { data: data, colorClass: "!border-accent1" })] })) : (_jsxs(_Fragment, { children: [chartElemMap[data.func], _jsx(HandleComponent, { data: data, colorClass: "!border-accent1" })] })) }) }));

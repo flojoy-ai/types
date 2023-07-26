@@ -10,7 +10,7 @@
     "build:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css",
     "tsc-path:com": "tscpaths -p tsconfig.json -s ./src -o ./components",
     "tsc-path:types": "tscpaths -p tsconfig.json -s ./src -o ./types",
-    "watch": "tsc-watch --project tsconfig.json --onSuccess \"npm run tsc-path:com\" && npm run watch:types && npm run watch:css",
+    "watch": "tsc-watch --project tsconfig.json --onSuccess \"npm run tsc-path:com\" & npm run watch:types & npm run watch:css",
     "watch:types": "tsc-watch --project tsconfig-types.json --onSuccess \"npm run tsc-path:types\"",
     "watch:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css --watch",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
