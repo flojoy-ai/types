@@ -17,12 +17,12 @@ const IONode = (props: CustomNodeProps) => {
       <div
         className={clsx(
           "flex h-48 w-48 flex-col items-center",
-          { "shadow-accent4 shadow-around": isRunning || data.selected },
+          { "shadow-around shadow-accent4": isRunning || data.selected },
           { "shadow-around shadow-red-700": nodeError },
         )}
       >
         <DodecahedronSVG />
-        <h2 className="text-accent4 font-sans text-2xl font-extrabold tracking-wider">
+        <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent4">
           {data.label}
         </h2>
         <HandleComponent data={data} variant="accent4" />
