@@ -17,6 +17,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "@typescript-eslint"],
+  ignorePatterns: ["components/"],
   rules: {
     // this is the only eslint rule that should be off!
     "react/react-in-jsx-scope": "off",

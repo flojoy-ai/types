@@ -9,6 +9,7 @@ const operatorMap = {
   DIVIDE: "÷",
   ABS: "|x|",
 };
+
 const ArithmeticNode = (props: CustomNodeProps) => {
   return (
     <DefaultNode width={72} height={72} {...props}>

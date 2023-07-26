@@ -4,7 +4,6 @@ export { default as DefaultNode } from "./nodes/DefaultNode";
 export { default as DataNode } from "./nodes/DataNode";
 export { default as ConditionalNode } from "./nodes/ConditionalNode";
 export { default as LogicNode } from "./nodes/LogicNode";
-export { default as LoopNode } from "./nodes/LoopNode";
 export { default as NumpyNode } from "./nodes/NumpyNode";
 export { default as ScipyNode } from "./nodes/ScipyNode";
 export { default as VisorNode } from "./nodes/VisorNode";
