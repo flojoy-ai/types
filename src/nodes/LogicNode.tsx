@@ -26,7 +26,7 @@ const LogicNode = (props: CustomNodeProps) => {
             {data.label}
           </h2>
         )}
-        <LogicHandleComponent data={data} colorClass="!border-accent3" />
+        <LogicHandleComponent data={data} variant="accent3" />
       </div>
     </NodeWrapper>
   );

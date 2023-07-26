@@ -81,12 +81,12 @@ const VisorNode = (props: CustomNodeProps) => {
               isThumbnail
             />
 
-            <HandleComponent data={data} colorClass="!border-accent1" />
+            <HandleComponent data={data} variant="accent1" />
           </div>
         ) : (
           <>
             {chartElemMap[data.func]}
-            <HandleComponent data={data} colorClass="!border-accent1" />
+            <HandleComponent data={data} variant="accent1" />
           </>
         )}
       </div>

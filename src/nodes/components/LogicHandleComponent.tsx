@@ -1,15 +1,14 @@
 import { Position } from "reactflow";
 import { CustomNodeProps } from "@src/types/node";
-import { CustomHandle } from "./CustomHandle";
+import { CustomHandle, HandleVariantProps } from "./CustomHandle";
 
 type LogicHandleComponentProps = {
   data: CustomNodeProps["nodeProps"]["data"];
-  colorClass: string;
-};
+} & HandleVariantProps;
 
 export const LogicHandleComponent = ({
   data,
-  colorClass,
+  variant,
 }: LogicHandleComponentProps) => {
   const inputs = data.inputs;
   const outputs = data.outputs;
@@ -29,7 +28,6 @@ export const LogicHandleComponent = ({
           position={Position.Bottom}
           type="target"
           param={inputs[0]}
-          colorClass={colorClass}
           style={{ left: 3, bottom: -3 }}
         />
       </>
@@ -41,14 +39,14 @@ export const LogicHandleComponent = ({
           position={Position.Bottom}
           type="target"
           param={inputs[0]}
-          colorClass={colorClass}
+          variant={variant}
           style={{ bottom: -6 }}
         />
         <CustomHandle
           position={Position.Left}
           type="target"
           param={inputs[1]}
-          colorClass={colorClass}
+          variant={variant}
           style={{ left: -6 }}
         />
       </>
@@ -64,7 +62,7 @@ export const LogicHandleComponent = ({
           position={Position.Right}
           type="source"
           param={outputs[0]}
-          colorClass={colorClass}
+          variant={variant}
           style={{ right: -3, top: 3 }}
         />
       </>
@@ -76,7 +74,7 @@ export const LogicHandleComponent = ({
           position={Position.Top}
           type="source"
           param={outputs[0]}
-          colorClass={colorClass}
+          variant={variant}
           style={{
             top: -6,
           }}
@@ -85,7 +83,7 @@ export const LogicHandleComponent = ({
           position={Position.Right}
           type="target"
           param={outputs[1]}
-          colorClass={colorClass}
+          variant={variant}
           style={{ right: -6 }}
         />
       </>

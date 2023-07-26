@@ -22,7 +22,7 @@ const DataNode = (props: CustomNodeProps) => {
         <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent2">
           {data.label}
         </h2>
-        <HandleComponent data={data} colorClass="!border-accent2" />
+        <HandleComponent data={data} variant="accent2" />
       </div>
     </NodeWrapper>
   );

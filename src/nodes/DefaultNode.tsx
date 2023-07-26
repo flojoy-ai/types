@@ -32,7 +32,7 @@ const DefaultNode = (props: CustomNodeProps) => {
             {data.label}
           </h2>
         )}
-        <HandleComponent data={data} colorClass="!border-accent1" />
+        <HandleComponent data={data} variant="accent1" />
       </div>
     </NodeWrapper>
   );

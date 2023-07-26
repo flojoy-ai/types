@@ -1,14 +1,13 @@
 import { Position } from "reactflow";
-import { CustomHandle } from "./CustomHandle";
+import { CustomHandle, HandleVariantProps } from "./CustomHandle";
 import { CustomNodeProps } from "@src/types/node";
 
 const HandleComponent = ({
   data,
-  colorClass,
+  variant,
 }: {
   data: CustomNodeProps["nodeProps"]["data"];
-  colorClass?: string;
-}) => {
+} & HandleVariantProps) => {
   const outputs = data.outputs ?? [];
   const inputs = data.inputs ?? [];
 
@@ -25,7 +24,7 @@ const HandleComponent = ({
               position={Position.Left}
               type="target"
               param={param}
-              colorClass={colorClass ?? ""}
+              variant={variant}
             />
           </div>
         ))}
@@ -42,7 +41,7 @@ const HandleComponent = ({
               position={Position.Right}
               type="source"
               param={param}
-              colorClass={colorClass ?? ""}
+              variant={variant}
             />
           </div>
         ))}
