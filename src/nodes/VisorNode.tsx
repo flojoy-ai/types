@@ -50,22 +50,22 @@ const VisorNode = (props: CustomNodeProps) => {
 
   const plotlyData = useMemo(
     () => (plotlyFig ? makePlotlyData(plotlyFig.data, theme, true) : null),
-    [plotlyFig, theme]
+    [plotlyFig, theme],
   );
 
   return (
     <NodeWrapper wrapperProps={props}>
       <div
         className={clsx(
-          "bg-transparent rounded-2xl",
+          "rounded-2xl bg-transparent",
           { "shadow-around shadow-accent1": isRunning || data.selected },
-          { "shadow-around shadow-red-700": nodeError }
+          { "shadow-around shadow-red-700": nodeError },
         )}
       >
         {plotlyData ? (
           <div
             className={
-              "relative flex items-center text-[17px] m-h-[130px] h-[fit-content]"
+              "m-h-[130px] relative flex h-[fit-content] items-center text-[17px]"
             }
           >
             <PlotlyComponent

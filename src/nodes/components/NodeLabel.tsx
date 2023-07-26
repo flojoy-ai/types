@@ -4,7 +4,7 @@ type NodeLabelProps = {
 
 export const NodeLabel = ({ label }: NodeLabelProps) => {
   return (
-    <p className="font-semibold text-xl text-center font-sans tracking-wider">
+    <p className="text-center font-sans text-xl font-semibold tracking-wider">
       {label}
     </p>
   );

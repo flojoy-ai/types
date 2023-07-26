@@ -21,7 +21,7 @@ const HandleWrapper = forwardRef<HTMLDivElement, CustomHandleProps>(
         className={clsx(
           "!h-3 !w-3 !border-2 !bg-white transition-colors duration-150 dark:!bg-black",
           colorClass,
-          className
+          className,
         )}
         type={type}
         id={param?.id}
@@ -29,7 +29,7 @@ const HandleWrapper = forwardRef<HTMLDivElement, CustomHandleProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 HandleWrapper.displayName = "HandleWrapper";

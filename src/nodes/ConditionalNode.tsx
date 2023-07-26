@@ -10,7 +10,7 @@ export const ConditionalNode = (props: CustomNodeProps) => {
 
   return (
     <LogicNode {...props}>
-      <h2 className="-rotate-45 font-sans text-2xl font-extrabold tracking-wider text-accent3">
+      <h2 className="text-accent3 -rotate-45 font-sans text-2xl font-extrabold tracking-wider">
         {operator}
       </h2>
     </LogicNode>

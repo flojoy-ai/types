@@ -1,4 +1,4 @@
-import { OverridePlotData } from "./plotly"; 
+import { OverridePlotData } from "./plotly";
 import { NodeProps } from "reactflow";
 import { Layout } from "plotly.js";
 type NodeElement = {

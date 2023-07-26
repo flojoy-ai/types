@@ -15,4 +15,3 @@ export const plotLayout = (theme: "dark" | "light") => {
   };
   return defaultLayout;
 };
-
