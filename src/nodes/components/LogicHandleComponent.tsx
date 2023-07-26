@@ -28,6 +28,7 @@ export const LogicHandleComponent = ({
           position={Position.Bottom}
           type="target"
           param={inputs[0]}
+          variant={variant}
           style={{ left: 3, bottom: -3 }}
         />
       </>
