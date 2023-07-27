@@ -25,7 +25,7 @@ const IONode = (props: CustomNodeProps) => {
         <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent4">
           {data.label}
         </h2>
-        <HandleComponent data={data} colorClass="!border-accent4" />
+        <HandleComponent data={data} variant="accent4" />
       </div>
     </NodeWrapper>
   );

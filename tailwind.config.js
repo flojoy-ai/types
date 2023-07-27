@@ -2,20 +2,6 @@
 module.exports = {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
-  safelist: [
-    "border-accent1",
-    "border-accent2",
-    "border-accent3",
-    "border-accent4",
-    "text-accent1",
-    "text-accent2",
-    "text-accent3",
-    "text-accent4",
-    "bg-accent1",
-    "bg-accent2",
-    "bg-accent3",
-    "bg-accent4",
-  ],
   theme: {
     extend: {
       colors: {
@@ -32,6 +18,8 @@ module.exports = {
           hover: "rgb(var(--color-accent1-hover) / <alpha-value>)",
         },
         accent2: "rgb(var(--color-accent2) / <alpha-value>)",
+        accent3: "rgb(var(--color-accent3) / <alpha-value>)",
+        accent4: "rgb(var(--color-accent4) / <alpha-value>)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -42,5 +30,5 @@ module.exports = {
         around: "0px 0px 12px 2px var(--tw-shadow)",
       },
     },
-  }
+  },
 };

@@ -24,5 +24,12 @@
   },
   "include": ["src/types"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["node_modules", "dist", "build", "src/data", "src/nodes", "src/plotly" ]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "src/data",
+    "src/nodes",
+    "src/plotly"
+  ]
 }

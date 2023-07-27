@@ -3,7 +3,7 @@ import "reactflow/dist/style.css";
 import { NOISY_SINE } from "./data/fc";
 import result from "@src/data/result.json";
 import React, { useEffect } from "react";
-import { nodeTypesMap } from "@src/nodes/nodeTypesMap"
+import { nodeTypesMap } from "@src/nodes/nodeTypesMap";
 
 const handleRemove = () => {};
 const nodeTypes: NodeTypes = Object.fromEntries(
@@ -29,7 +29,7 @@ const nodeTypes: NodeTypes = Object.fromEntries(
         />
       );
     },
-  ])
+  ]),
 );
 console.log(" nodeTypes: ", nodeTypes["default"]);
 const App = () => {
@@ -43,8 +43,7 @@ const App = () => {
       nodes={NOISY_SINE.nodes}
       nodeTypes={nodeTypes}
       edges={NOISY_SINE.edges}
-    >
-    </ReactFlow>
+    ></ReactFlow>
   );
 };
 

@@ -20,7 +20,7 @@ const DefaultNode = (props: CustomNodeProps) => {
         className={clsx(
           "flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-accent1 bg-accent1/5",
           { "shadow-around shadow-accent1": isRunning || data.selected },
-          { "shadow-around shadow-red-700": nodeError }
+          { "shadow-around shadow-red-700": nodeError },
         )}
         style={{
           width,
@@ -32,7 +32,7 @@ const DefaultNode = (props: CustomNodeProps) => {
             {data.label}
           </h2>
         )}
-        <HandleComponent data={data} colorClass="!border-accent1" />
+        <HandleComponent data={data} variant="accent1" />
       </div>
     </NodeWrapper>
   );
