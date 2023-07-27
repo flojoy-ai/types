@@ -1,0 +1,4 @@
+components/*
+styles/*
+types/*
+src/data/*.json

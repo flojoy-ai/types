@@ -2,26 +2,40 @@ import clsx from "clsx";
 import { forwardRef, HTMLAttributes } from "react";
 import { Handle, HandleProps } from "reactflow";
 import { ParamTooltip } from "./ParamTooltip";
+import { cva, VariantProps } from "class-variance-authority";
+
+const handle = cva(undefined, {
+  variants: {
+    variant: {
+      blue: "!border-blue-500",
+      accent1: "!border-accent1",
+      accent2: "!border-accent2",
+      accent3: "!border-accent3",
+      accent4: "!border-accent4",
+    },
+  },
+});
+
+export type HandleVariantProps = VariantProps<typeof handle>;
 
 type CustomHandleProps = HandleProps &
   Omit<HTMLAttributes<HTMLDivElement>, "id"> & {
-    colorClass: string;
     param: {
       name: string;
       type: string;
       id: string;
       desc: string | null;
     };
-  };
+  } & HandleVariantProps;
 
 const HandleWrapper = forwardRef<HTMLDivElement, CustomHandleProps>(
-  ({ colorClass, param, type, className, ...props }, ref) => {
+  ({ variant, param, type, className, ...props }, ref) => {
     return (
       <Handle
         className={clsx(
           "!h-3 !w-3 !border-2 !bg-white transition-colors duration-150 dark:!bg-black",
-          colorClass,
-          className
+          handle({ variant }),
+          className,
         )}
         type={type}
         id={param?.id}
@@ -29,7 +43,7 @@ const HandleWrapper = forwardRef<HTMLDivElement, CustomHandleProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 HandleWrapper.displayName = "HandleWrapper";

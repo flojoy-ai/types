@@ -1,23 +1,22 @@
 import { Position } from "reactflow";
-import { CustomHandle } from "./CustomHandle";
+import { CustomHandle, HandleVariantProps } from "./CustomHandle";
 import { CustomNodeProps } from "@src/types/node";
 
 const HandleComponent = ({
   data,
-  colorClass,
+  variant,
 }: {
   data: CustomNodeProps["nodeProps"]["data"];
-  colorClass?: string;
-}) => {
+} & HandleVariantProps) => {
   const outputs = data.outputs ?? [];
   const inputs = data.inputs ?? [];
 
   return (
     <>
-      <div className="absolute h-full flex top-0 flex-col justify-evenly -left-0.5">
+      <div className="absolute -left-0.5 top-0 flex h-full flex-col justify-evenly">
         {inputs.map((param) => (
           <div
-            className="flex items-center relative"
+            className="relative flex items-center"
             key={`input-${data.id}-${param.name}`}
           >
             <CustomHandle
@@ -25,16 +24,16 @@ const HandleComponent = ({
               position={Position.Left}
               type="target"
               param={param}
-              colorClass={colorClass ?? ""}
+              variant={variant}
             />
           </div>
         ))}
       </div>
 
-      <div className="absolute h-full flex top-0 flex-col justify-evenly right-0">
+      <div className="absolute right-0 top-0 flex h-full flex-col justify-evenly">
         {outputs.map((param) => (
           <div
-            className="flex items-center relative"
+            className="relative flex items-center"
             key={`input-${data.id}-${param.name}`}
           >
             <CustomHandle
@@ -42,7 +41,7 @@ const HandleComponent = ({
               position={Position.Right}
               type="source"
               param={param}
-              colorClass={colorClass ?? ""}
+              variant={variant}
             />
           </div>
         ))}

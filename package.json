@@ -5,20 +5,23 @@
   "types": "components/index.d.ts",
   "scripts": {
     "start": "vite",
+    "cleanup": "rmdir /s /q dist build components types styles",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "npm run build",
     "build": "tsc --project tsconfig.json && npm run build:types && npm run tsc-path:com && npm run tsc-path:types && npm run build:css",
-    "build:types": "tsc --project tsconfig-types.json",
     "build:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css",
+    "build:types": "tsc --project tsconfig-types.json",
     "tsc-path:com": "tscpaths -p tsconfig.json -s ./src -o ./components",
     "tsc-path:types": "tscpaths -p tsconfig.json -s ./src -o ./types",
     "watch": "tsc-watch --project tsconfig.json --onSuccess \"npm run tsc-path:com\" & npm run watch:types & npm run watch:css",
-    "watch:types": "tsc-watch --project tsconfig-types.json --onSuccess \"npm run tsc-path:types\"",
     "watch:css": "tailwindcss -i ./src/index.css -o ./styles/styles.css --watch",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "cleanup": "rmdir /s /q dist build components types styles"
+    "watch:types": "tsc-watch --project tsconfig-types.json --onSuccess \"npm run tsc-path:types\""
   },
   "dependencies": {
     "@tabler/icons-react": "^2.17.0",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "plotly.js": "2.23.2",
     "react": "^17.0.2",

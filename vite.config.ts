@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    open: true
+    open: true,
   },
   plugins: [react()],
   resolve: {
@@ -17,4 +17,4 @@ export default defineConfig({
       "@/lib": path.resolve(__dirname, "src/lib"),
     },
   },
-})
+});
