@@ -27,7 +27,7 @@ const NumpyNode = (props: CustomNodeProps) => {
             <span className="font-extrabold">{data.label}</span>
           </h2>
         </div>
-        <HandleComponent data={data} colorClass="!border-blue-500" />
+        <HandleComponent data={data} variant="blue" />
       </div>
     </NodeWrapper>
   );
