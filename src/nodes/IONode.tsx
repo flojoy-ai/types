@@ -2,13 +2,13 @@ import { memo } from "react";
 import clsx from "clsx";
 import { CustomNodeProps } from "@src/types/node";
 import NodeWrapper from "./components/NodeWrapper";
-import { DodecahedronSVG } from "./assets/DodecahedronSVG"; 
+import { DodecahedronSVG } from "./assets/DodecahedronSVG";
 import HandleComponent from "./components/HandleComponent";
 
 const IONode = (props: CustomNodeProps) => {
   const {
     isRunning,
-    nodeProps: { selected, data },
+    nodeProps: { data },
     nodeError,
   } = props;
 
@@ -18,7 +18,7 @@ const IONode = (props: CustomNodeProps) => {
         className={clsx(
           "flex h-48 w-48 flex-col items-center",
           { "shadow-around shadow-accent4": isRunning || data.selected },
-          { "shadow-around shadow-red-700": nodeError }
+          { "shadow-around shadow-red-700": nodeError },
         )}
       >
         <DodecahedronSVG />
