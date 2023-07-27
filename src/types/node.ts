@@ -87,5 +87,6 @@ export interface CustomNodeProps {
     data: OverridePlotData;
     layout: Partial<Layout> | undefined;
   };
+  textBlob?: string;
   theme?: "light" | "dark";
 }

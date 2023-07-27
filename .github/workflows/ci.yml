@@ -1,0 +1,37 @@
+name: Sync main to react-17
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+
+      - name: Get email
+        id: email
+        uses: KRANTHI0918/get-github-email-by-username-action@v2.1
+        with:
+          github-username: ${{ github.actor }}
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Sync React-17 branch
+        run: |
+          cd ${{ github.workspace }}
+          git config --local user.name "${{github.actor}}" && git config --local user.email "${{ steps.email.outputs.email }}"
+          git pull
+          git checkout react-17
+          git merge main
+          git add .
+          git commit -m "sync to commit: $(git log -1 --pretty=format:'%s')"
+          git push
