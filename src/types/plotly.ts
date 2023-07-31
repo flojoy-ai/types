@@ -1,5 +1,5 @@
 import { DataContainer } from "./dataContainer";
-import { PlotData } from "plotly.js";
+import { PlotData, Layout } from "plotly.js";
 import type { PlotParams } from "react-plotly.js";
 
 export type DataContainer2PlotlyProps = {
@@ -26,9 +26,8 @@ export type OverridePlotData = Array<
 >;
 
 export type PlotProps = {
-  id: string;
   data: OverridePlotData;
   isThumbnail?: boolean;
-  layout: any;
+  layout: Partial<Layout>;
   theme?: "light" | "dark";
 } & Omit<PlotParams, "data">;

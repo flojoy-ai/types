@@ -23,8 +23,8 @@ type NodeElement = {
     string,
     {
       type: string;
-      default: string | number | boolean | null;
-      options: Array<string>;
+      default: string | number | boolean | null | undefined;
+      options?: Array<string>;
       desc: string | null;
     }
   >;
@@ -54,12 +54,7 @@ export type ElementsData = {
   running?: boolean;
   failed?: boolean;
   ctrls: CtrlData;
-  inputs?: Array<{
-    name: string;
-    id: string;
-    type: string;
-    desc: string | null;
-  }>;
+  inputs?: NodeElement["inputs"];
   outputs?: Array<{
     name: string;
     id: string;
@@ -87,5 +82,6 @@ export interface CustomNodeProps {
     data: OverridePlotData;
     layout: Partial<Layout> | undefined;
   };
+  textBlob?: string;
   theme?: "light" | "dark";
 }

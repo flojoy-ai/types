@@ -16,7 +16,6 @@ const PlotlyComponent = (props: PlotProps) => {
     layout,
     useResizeHandler,
     style,
-    id,
     isThumbnail,
     theme = "light",
   } = props;
