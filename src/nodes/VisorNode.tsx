@@ -20,6 +20,7 @@ import Surface3D from "./assets/nodes/3DSurface";
 import Bar from "./assets/nodes/Bar";
 import Table from "./assets/nodes/Table";
 import Image from "./assets/nodes/Image";
+import MarkDownText from "./components/MarkDownText";
 
 const chartElemMap: { [func: string]: React.JSX.Element } = {
   SCATTER: <Scatter />,
@@ -37,6 +38,7 @@ const chartElemMap: { [func: string]: React.JSX.Element } = {
   PROPHET_PLOT: <ProphetPlot />,
   PROPHET_COMPONENTS: <ProphetComponents />,
   COMPOSITE: <CompositePlot />,
+  TEXT_VIEW: <Table />,
 };
 
 const VisorNode = (props: CustomNodeProps) => {
@@ -46,6 +48,7 @@ const VisorNode = (props: CustomNodeProps) => {
     isRunning,
     plotlyFig,
     theme = "light",
+    textBlob,
   } = props;
 
   const plotlyData = useMemo(
@@ -62,33 +65,23 @@ const VisorNode = (props: CustomNodeProps) => {
           { "shadow-around shadow-red-700": nodeError },
         )}
       >
-        {plotlyData ? (
-          <div
-            className={
-              "m-h-[130px] relative flex h-[fit-content] items-center text-[17px]"
-            }
-          >
-            <PlotlyComponent
-              data={plotlyData}
-              id={data.id}
-              layout={plotlyFig?.layout ?? {}}
-              useResizeHandler
-              style={{
-                height: 293,
-                width: 380,
-              }}
-              theme={theme}
-              isThumbnail
-            />
-
-            <HandleComponent data={data} variant="accent1" />
-          </div>
-        ) : (
-          <>
-            {chartElemMap[data.func]}
-            <HandleComponent data={data} variant="accent1" />
-          </>
+        {plotlyData && (
+          <PlotlyComponent
+            data={plotlyData}
+            id={data.id}
+            layout={plotlyFig?.layout ?? {}}
+            useResizeHandler
+            style={{
+              height: 293,
+              width: 380,
+            }}
+            theme={theme}
+            isThumbnail
+          />
         )}
+        {textBlob && <MarkDownText text={textBlob} isThumbnail />}
+        {!plotlyData && !textBlob && <>{chartElemMap[data.func]}</>}
+        <HandleComponent data={data} variant="accent1" />
       </div>
     </NodeWrapper>
   );

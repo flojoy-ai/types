@@ -82,7 +82,7 @@ export const LogicHandleComponent = ({
         />
         <CustomHandle
           position={Position.Right}
-          type="target"
+          type="source"
           param={outputs[1]}
           variant={variant}
           style={{ right: -6 }}
