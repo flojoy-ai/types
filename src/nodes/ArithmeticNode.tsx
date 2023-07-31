@@ -13,7 +13,7 @@ const operatorMap = {
 const ArithmeticNode = (props: CustomNodeProps) => {
   return (
     <DefaultNode width={72} height={72} {...props}>
-      <h2 className="font-sans text-4xl font-semibold tracking-wider text-accent1">
+      <h2 className="text-center font-sans text-4xl font-semibold tracking-wider text-accent1">
         {operatorMap[props.nodeProps.data.func]}
       </h2>
     </DefaultNode>

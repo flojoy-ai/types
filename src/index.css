@@ -9,6 +9,7 @@
     --accent-foreground: 222.2 47.4% 12.2%;
     --radius: 0.5rem;
 
+    --color-modal: 244 244 244;
     --color-accent1: 123 97 255;
     --color-accent1-hover: 175 159 255;
     --color-accent2: 46 131 255;
@@ -25,6 +26,7 @@
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
 
+    --color-modal: 25 25 25;
     --color-accent1: 153 245 255;
     --color-accent1-hover: 212 251 255;
     --color-accent2: 123 97 255;

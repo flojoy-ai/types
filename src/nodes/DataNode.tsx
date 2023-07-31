@@ -14,12 +14,12 @@ const DataNode = (props: CustomNodeProps) => {
     <NodeWrapper wrapperProps={props}>
       <div
         className={clsx(
-          "flex h-24 w-52 items-center justify-center rounded-full border-2 border-accent2",
+          "flex h-24 w-52 items-center justify-center rounded-full border-2 border-solid border-accent2",
           { "shadow-around shadow-accent2": isRunning || data.selected },
           { "shadow-around shadow-red-700": nodeError },
         )}
       >
-        <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent2">
+        <h2 className="text-center font-sans text-2xl font-extrabold tracking-wider text-accent2">
           {data.label}
         </h2>
         <HandleComponent data={data} variant="accent2" />
