@@ -19,7 +19,7 @@ const DataNode = (props: CustomNodeProps) => {
           { "shadow-around shadow-red-700": nodeError },
         )}
       >
-        <h2 className="text-center font-sans text-2xl font-extrabold tracking-wider text-accent2">
+        <h2 className="m-0 text-center font-sans text-2xl font-extrabold tracking-wider text-accent2">
           {data.label}
         </h2>
         <HandleComponent data={data} variant="accent2" />

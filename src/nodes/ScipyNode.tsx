@@ -22,7 +22,7 @@ const NumpyNode = (props: CustomNodeProps) => {
       >
         <div className="flex flex-col items-center">
           <ScipySvg className="h-16 w-16" />
-          <h2 className="text-center font-sans text-2xl tracking-wider text-blue-500">
+          <h2 className="m-0 text-center font-sans text-2xl tracking-wider text-blue-500">
             <span>sp.</span>
             <span className="font-extrabold">{data.label}</span>
           </h2>
