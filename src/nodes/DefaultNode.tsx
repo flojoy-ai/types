@@ -18,7 +18,7 @@ const DefaultNode = (props: CustomNodeProps) => {
     <NodeWrapper wrapperProps={props}>
       <div
         className={clsx(
-          "flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-accent1 bg-accent1/5",
+          "flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-solid border-accent1 bg-accent1/5",
           { "shadow-around shadow-accent1": isRunning || data.selected },
           { "shadow-around shadow-red-700": nodeError },
         )}
@@ -28,7 +28,7 @@ const DefaultNode = (props: CustomNodeProps) => {
         }}
       >
         {children ?? (
-          <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent1">
+          <h2 className="m-0 text-center font-sans text-2xl font-extrabold tracking-wider text-accent1">
             {data.label}
           </h2>
         )}

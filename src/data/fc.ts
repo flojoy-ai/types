@@ -7,12 +7,12 @@ export const NOISY_SINE =
         width: 208,
         height: 96,
         id: "CONSTANT-59bbd80d-6fed-4b07-aeea-0636b544d3b4",
-        type: "SIMULATIONS",
+        type: "GENERATORS",
         data: {
           id: "CONSTANT-59bbd80d-6fed-4b07-aeea-0636b544d3b4",
           label: "2.0",
           func: "CONSTANT",
-          type: "SIMULATIONS",
+          type: "GENERATORS",
           ctrls: {
             constant: {
               type: "float",
@@ -116,12 +116,12 @@ export const NOISY_SINE =
         width: 208,
         height: 96,
         id: "RAND-d2ec3ac8-17b0-486e-83f3-9a4f8581b3bb",
-        type: "SIMULATIONS",
+        type: "GENERATORS",
         data: {
           id: "RAND-d2ec3ac8-17b0-486e-83f3-9a4f8581b3bb",
           label: "RAND",
           func: "RAND",
-          type: "SIMULATIONS",
+          type: "GENERATORS",
           ctrls: {
             distribution: {
               type: "select",
@@ -208,12 +208,12 @@ export const NOISY_SINE =
         width: 208,
         height: 96,
         id: "SINE-c5df4e56-5ab8-447e-8ad9-6b7514ddb319",
-        type: "SIMULATIONS",
+        type: "GENERATORS",
         data: {
           id: "SINE-c5df4e56-5ab8-447e-8ad9-6b7514ddb319",
           label: "SINE",
           func: "SINE",
-          type: "SIMULATIONS",
+          type: "GENERATORS",
           ctrls: {
             amplitude: {
               type: "float",
@@ -341,12 +341,12 @@ export const NOISY_SINE =
         width: 250,
         height: 159,
         id: "HISTOGRAM-00c89b9a-1c2d-4e73-b176-9e13c641642f",
-        type: "PLOTLY",
+        type: "VISUALIZERS",
         data: {
           id: "HISTOGRAM-00c89b9a-1c2d-4e73-b176-9e13c641642f",
           label: "HISTOGRAM",
           func: "HISTOGRAM",
-          type: "PLOTLY",
+          type: "VISUALIZERS",
           ctrls: {},
           inputs: [
             {
@@ -383,12 +383,12 @@ export const NOISY_SINE =
         width: 225,
         height: 226,
         id: "SCATTER-79c51e80-786c-464d-a33f-467bd57d5e13",
-        type: "PLOTLY",
+        type: "VISUALIZERS",
         data: {
           id: "SCATTER-79c51e80-786c-464d-a33f-467bd57d5e13",
           label: "SCATTER",
           func: "SCATTER",
-          type: "PLOTLY",
+          type: "VISUALIZERS",
           ctrls: {},
           inputs: [
             {
