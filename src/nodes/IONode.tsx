@@ -22,7 +22,7 @@ const IONode = (props: CustomNodeProps) => {
         )}
       >
         <DodecahedronSVG />
-        <h2 className="font-sans text-2xl font-extrabold tracking-wider text-accent4">
+        <h2 className="m-0 text-center font-sans text-2xl font-extrabold tracking-wider text-accent4">
           {data.label}
         </h2>
         <HandleComponent data={data} variant="accent4" />
