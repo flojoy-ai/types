@@ -24,7 +24,7 @@ const DefaultNode = (props: CustomNodeProps) => {
           { "shadow-around shadow-red-700": nodeError },
         )}
         style={{
-          width: textWrap((width as number) ?? 160, 24, data.label),
+          width: width ?? textWrap(160, 24, data.label),
           minHeight: height,
         }}
       >
