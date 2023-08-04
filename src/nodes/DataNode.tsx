@@ -15,7 +15,7 @@ const DataNode = (props: CustomNodeProps) => {
     <NodeWrapper wrapperProps={props}>
       <div
         className={clsx(
-          "flex min-h-[96px] items-center justify-center rounded-full border-2 border-solid border-accent2",
+          "flex min-h-[96px] items-center justify-center rounded-full border-2 border-solid border-accent2 p-2",
           { "shadow-around shadow-accent2": isRunning || data.selected },
           { "shadow-around shadow-red-700": nodeError },
         )}
