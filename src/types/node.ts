@@ -28,6 +28,7 @@ type NodeElement = {
       desc: string | null;
     }
   >;
+  init_parameters: NodeElement["parameters"];
   pip_dependencies: Array<{ name: string; v: string }>;
   ui_component_id: string;
   children: null;
@@ -54,6 +55,7 @@ export type ElementsData = {
   running?: boolean;
   failed?: boolean;
   ctrls: CtrlData;
+  initCtrls: CtrlData;
   inputs?: NodeElement["inputs"];
   outputs?: Array<{
     name: string;
