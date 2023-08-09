@@ -1,35 +1,19 @@
 import React from "react";
 import { CustomNodeProps } from "../../types/node";
-import NodeButtons from "./NodeButtons";
 
 const NodeWrapper = ({
-  wrapperProps: {
-    nodeProps,
-    wrapperOnClick,
-    handleRemove,
-    handleClickExpand,
-    nodeError,
-  },
+  wrapperProps: { wrapperOnClick, nodeError },
   children,
 }: {
   wrapperProps: CustomNodeProps;
   children: React.ReactNode;
 }) => {
-  const { data } = nodeProps;
-
   return (
     <div
       className="relative"
       data-testid="node-wrapper"
       onClick={wrapperOnClick}
     >
-      {data.selected && handleRemove && (
-        <NodeButtons
-          data={data}
-          handleRemove={handleRemove}
-          handleClickExpand={handleClickExpand}
-        />
-      )}
       {nodeError && <ErrorPopup message={nodeError} />}
       {children}
     </div>
