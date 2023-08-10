@@ -1,6 +1,7 @@
 import { OverridePlotData } from "./plotly";
 import { NodeProps } from "reactflow";
 import { Layout } from "plotly.js";
+
 type NodeElement = {
   name: string;
   key: string;
@@ -28,7 +29,7 @@ type NodeElement = {
       desc: string | null;
     }
   >;
-  init_parameters: NodeElement["parameters"];
+  init_parameters?: NodeElement["parameters"];
   pip_dependencies: Array<{ name: string; v: string }>;
   ui_component_id: string;
   children: null;
@@ -55,7 +56,7 @@ export type ElementsData = {
   running?: boolean;
   failed?: boolean;
   ctrls: CtrlData;
-  initCtrls: CtrlData;
+  initCtrls?: CtrlData;
   inputs?: NodeElement["inputs"];
   outputs?: Array<{
     name: string;
